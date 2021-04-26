@@ -1,0 +1,21 @@
+[
+    {"value": null, "text": "Selectionne ton produit"},
+    {"text": "Produit vaisselle", "value": "Produit vaisselle"},
+    {"text": "Produit vitres", "value": "Produit vitres"},
+    {"text": "Produit dépoussierant", "value": "Produit dépoussierant"},
+    {"text": "Produit nettoyant sols", "value": "Produit nettoyant sols"},
+    {"text": "Lessive", "value": "Lessive"},
+    {"text": "Adoucissant", "value": "Adoucissant"},
+    {"text": "Lingettes anti-décolorant", "value": "Lingettes anti-décolorant"},
+    {"text": "Pastilles lave-vaisselle", "value": "Pastilles lave-vaisselle"},
+    {"text": "Sel régénérant", "value": "Sel régénérant"},
+    {"text": "Liquide rinçage", "value": "Liquide rinçage"},
+    {"text": "Balai", "value": "Balai"},
+    {"text": "Serpillère", "value": "Serpillère"},
+    {"text": "Désinfectant WC", "value": "Désinfectant WC"},
+    {"text": "Désodorisant WC", "value": "Désodorisant WC"},
+    {"text": "Javel", "value": "Javel"},
+    {"text": "Sanythol", "value": "Sanythol"},
+    {"text": "Alcool ménager", "value": "Alcool ménager"},
+    {"text": "Vinaigre ménager", "value": "Vinaigre ménager"}
+  ]

@@ -1,0 +1,13 @@
+[
+    {"value": null, "text": "Selectionne ton produit"},
+    {"text": "Serviette de toilette", "value": "Serviette de toilette"},
+    {"text": "Drap de bain", "value": "Drap de bain"},
+    {"text": "Gant de toilette", "value": "Gant de toilette"},
+    {"text": "Drap plat", "value": "Drap plat"},
+    {"text": "Drap housse", "value": "Drap housse"},
+    {"text": "Housse de couette", "value": "Housse de couette"},
+    {"text": "Taie d'oreiller", "value": "Taie d'oreiller"},
+    {"text": "Oreiller", "value": "Oreiller"},
+    {"text": "Torchon", "value": "Torchon"},
+    {"text": "Serviette de table", "value": "Serviette de table"}
+  ]

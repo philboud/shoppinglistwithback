@@ -1,0 +1,14 @@
+[
+    {"value": null, "text": "Selectionne ton produit"},
+    {"text": "Nourriture chien", "value": "Nourriture chien"},
+    {"text": "Nourriture chat", "value": "Nourriture chat"},
+    {"text": "Nourriture lapin", "value": "Nourriture lapin"},
+    {"text": "Graines oiseau", "value": "Graines oiseau"},
+    {"text": "Nourriture poisson", "value": "Nourriture poisson"},
+    {"text": "Litière chat", "value": "Litière chat"},
+    {"text": "Litière lapin", "value": "Litière lapin"},
+    {"text": "Foin", "value": "Foin"},
+    {"text": "Copeaux litière", "value": "Copeaux litière"},
+    {"text": "Jouets animaux", "value": "Jouets animaux"},
+    {"text": "Friandises animaux", "value": "Friandises animaux"}
+  ]

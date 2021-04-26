@@ -1,0 +1,21 @@
+[
+    {"value": null, "text": "Selectionne ton produit"},
+    {"text": "Gel douche", "value": "Gel douche"},
+    {"text": "Savon", "value": "Savon"},
+    {"text": "Shampoing", "value": "Shampoing"},
+    {"text": "Après-Shampoing", "value": "Après-Shampoing"},
+    {"text": "Dentifrice", "value": "Dentifrice"},
+    {"text": "Coton tige", "value": "Coton tige"},
+    {"text": "Coton hydrophile", "value": "Coton hydrophile"},
+    {"text": "Coton démaquillant", "value": "Coton démaquillant"},
+    {"text": "Produit démaquillant", "value": "Produit démaquillant"},
+    {"text": "Maquillage", "value": "Maquillage"},
+    {"text": "Creme pour le corps", "value": "Creme pour le corps"},
+    {"text": "Creme pour le visage", "value": "Creme pour le visage"},
+    {"text": "Creme pour les mains", "value": "Creme pour les mains"},
+    {"text": "Labello", "value": "Labello"},
+    {"text": "Brosse à dents", "value": "Brosse à dents"},
+    {"text": "Brosse à cheveux", "value": " à cheveux"},
+    {"text": "Peigne", "value": "Peigne"}
+
+  ]
