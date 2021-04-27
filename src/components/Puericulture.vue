@@ -76,6 +76,8 @@
 </template>
 
 <script>
+import ListsService from '../../services/ListsService.js'
+
 export default {
   name: 'Puericulture',
   data () {
@@ -116,7 +118,7 @@ export default {
     }
   },
   mounted () {
-    this.listeEnCours = JSON.parse(localStorage.getItem('selected'))
+    this.getLists()
   },
   methods: {
     countDownChanged1 (dismissCountDown) {
@@ -140,11 +142,12 @@ export default {
         this.showModal()
       }
     },
-    deleteItem (index) {
-      this.listeEnCours.splice(index, 1)
-    },
     showModal () {
       this.$refs['my-modal'].show()
+    },
+    deleteList (index) {
+      this.deleteListBack(index)
+      this.listeEnCours.splice(index, 1)
     },
     hideModal () {
       if (this.qtys === null && this.qty === '') {
@@ -158,13 +161,30 @@ export default {
           this.$refs['my-modal'].hide()
         }
         if (this.qty !== '') {
-          this.listeEnCours.push({produit: this.selected, qty: this.qty})
+          console.log(this.selected)
+          this.listeEnCours.push({produit: this.selected, qty: this.qty, checked: true})
+          this.addProduit()
           this.qty = ''
           this.qtys = null
           this.selected = null
           this.$refs['my-modal'].hide()
         }
       }
+    },
+    async getLists () {
+      const response = await ListsService.fetchLists()
+      this.listeEnCours = response.data.lists
+    },
+    async deleteListBack (index) {
+      var id = this.listeEnCours[index]._id
+      await ListsService.deleteList(id)
+    },
+    async addProduit () {
+      console.log(this.selected)
+      await ListsService.addList({
+        produit: this.selected,
+        qty: this.qty
+      })
     }
   }
 }

@@ -67,7 +67,7 @@
           <b-icon
             icon="trash"
             style="width: 30px; height: 30px"
-            @click="deleteItem(row.index)"
+            @click="deleteList(row.index)"
           ></b-icon>
         </template>
       </b-table>
@@ -77,6 +77,7 @@
 
 <script>
 import json from '../json/epicerie.json'
+import ListsService from '../../services/ListsService.js'
 
 export default {
   name: 'Epicerie',
@@ -88,6 +89,7 @@ export default {
       dismissCountDown2: 0,
       qtys: null,
       qty: '',
+      produit: '',
       selected: null,
       listeEnCours: [],
       fields: [ {
@@ -108,7 +110,7 @@ export default {
     }
   },
   mounted () {
-    this.listeEnCours = JSON.parse(localStorage.getItem('selected'))
+    this.getLists()
     this.epicerie = (json)
   },
   methods: {
@@ -136,7 +138,8 @@ export default {
     showModal () {
       this.$refs['my-modal'].show()
     },
-    deleteItem (index) {
+    deleteList (index) {
+      this.deleteListBack(index)
       this.listeEnCours.splice(index, 1)
     },
     hideModal () {
@@ -151,13 +154,30 @@ export default {
           this.$refs['my-modal'].hide()
         }
         if (this.qty !== '') {
+          console.log(this.selected)
           this.listeEnCours.push({produit: this.selected, qty: this.qty, checked: true})
+          this.addProduit()
           this.qty = ''
           this.qtys = null
           this.selected = null
           this.$refs['my-modal'].hide()
         }
       }
+    },
+    async getLists () {
+      const response = await ListsService.fetchLists()
+      this.listeEnCours = response.data.lists
+    },
+    async deleteListBack (index) {
+      var id = this.listeEnCours[index]._id
+      await ListsService.deleteList(id)
+    },
+    async addProduit () {
+      console.log(this.selected)
+      await ListsService.addList({
+        produit: this.selected,
+        qty: this.qty
+      })
     }
   }
 }
